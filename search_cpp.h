@@ -7,14 +7,12 @@ namespace SearchCpp
 	template<class T>
 	long LinearSearch( T* l, T* r, T val )
 	{
-		long index = 0;
 		for( T* i = l; i < r; i++ )
 		{
 			if( *i == val )
 			{
-				return index;
+				return std::distance( l, i );
 			}
-			index++;
 		}
 		return -1;
 	}
